@@ -1,0 +1,494 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+body {
+  background: #009b72;
+  width: 100%;
+  overflow-x: hidden;
+
+}
+#top {
+  background-color: #f7f7f9;
+  font-size: 1rem;
+  width: 80%;
+  margin: auto;
+  position: sticky;
+  top: 0;
+  left: 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 40px;
+  z-index: 999;
+}
+#top1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+}
+.logo {
+  text-decoration: none;
+  color: #5b6057;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav li {
+  padding: 0 60px;
+  list-style: none;
+}
+.nav li a {
+  text-decoration: none;
+  color: #5b6057;
+}
+#menu {
+  padding: 10px 60px;
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr;
+  align-items: center;
+  
+}
+#menu input {
+  width: 60%;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+
+#menu button {
+  background-color: #009b72;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#menu button:hover,
+#menu button:focus {
+  background-color: #86dac4;
+}
+
+#cart-button {
+  margin-left: 100px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: rgb(75, 75, 75);
+  transition: 0.5s ease;
+}
+#cart-button:hover {
+  font-size: 1.6rem;
+  color: black;
+}
+
+#main {
+  padding: 10px 60px;
+  background: none;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.sidebar {
+  width: 200px;
+  background-color: #f7f7f9;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  padding: 10px;
+  position: relative;
+}
+
+.menu-item:hover .submenu {
+  display: block;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.submenu li {
+  padding: 5px 0;
+}
+
+.menu-item a {
+  color: black;
+  text-decoration: none;
+}
+.submenu li:hover {
+  background-color: #f9f9f9;
+}
+.right {
+  width: 80%;
+  height: 413px;
+  background: #f7f7f9;
+  padding-right: 0;
+  margin-left: 20px;
+}
+.right img {
+  width: 100%;
+  height: 413px;
+}
+#categories {
+  text-align: center;
+  background: #f7f7f9;
+  width: 80%;
+  height: fit-content;
+  padding: 10px 60px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#categories a {
+  text-decoration: none;
+  color: black;
+}
+.container {
+  width: 100%;
+  height: fit-content;
+}
+.container img {
+  height: 250px;
+  width: 100%;
+}
+.container p {
+  padding: 10px;
+  font-size: 1.3rem;
+}
+
+.splide__slide {
+  margin: 0 20px;
+}
+#t-selling {
+  padding: 10px 60px;
+  width: 80%;
+  height: fit-content;
+  margin: auto;
+  background: #f7f7f9;
+  margin-top: 30px;
+  text-align: center;
+}
+
+#t-selling img {
+  height: 200px;
+  max-width: 400px;
+}
+#t-selling h3 {
+  padding: 20px 0;
+}
+.add {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0px 0;
+}
+.add button {
+  padding: 8px 14px;
+  font-size: 1rem;
+  border: none;
+  background: lightgray;
+  transition: 0.3s ease;
+}
+.add button:hover {
+  background: rgb(76, 76, 76);
+}
+
+#footer,
+.footer {
+  width: 100%;
+  padding: 50px;
+  height: fit-content;
+  margin: 20px auto 0 auto;
+  background: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #f7f7f9;
+  flex-wrap: wrap;
+}
+.footer li {
+  list-style: none;
+  padding: 10px;
+}
+.footer li:first-child {
+  margin-top: 20px;
+}
+.footer a {
+  text-decoration: none;
+  color: #f7f7f9;
+}
+.f-t {
+  font-size: 1.3rem;
+}
+.splide {
+  visibility: visible;
+}
+.product {
+  padding: 30px 60px;
+  background: #f7f7f9;
+  width: 80%;
+  height: fit-content;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#product-left {
+  width: 40%;
+  height: 500px;
+  background: #fff;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#product-left img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#product-right {
+  width: 55%;
+  height: 500px;
+  text-align: center;
+  align-content: center;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#product-right select {
+  padding: 5px 10px;
+  margin-bottom: 30px;
+}
+#product-right p {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+}
+#description {
+  width: 70%;
+  margin: auto;
+}
+#product-right h3 {
+  text-align: left;
+  padding: 20px;
+
+  font-size: 2rem;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+#product-right button {
+  width: 60%;
+  height: 4rem;
+  background-color: #009b72;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.cart {
+  width: 25%;
+  height: 400px;
+  background: black;
+  color: white;
+  position: fixed;
+  top: 13%;
+  right: 10%;
+  transition: 0.3s ease;
+  border-radius: 10px;
+  z-index: 999;
+  overflow: auto;
+}
+.cart-card{
+  display: grid;
+  width: 100%;
+  grid-template-columns: 2fr 7fr;
+  text-align: center;
+  margin-top: 40px;
+}
+.cart-card img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.item-details{
+  display: flex;
+  justify-content: left;
+  text-align: left;
+  margin-top: 15px;
+}
+.invisible {
+  display: none;
+}
+
+.blur{
+  filter: blur(4px)
+}
+.checkout{
+text-align: center;
+padding: 10px;
+}
+.checkout-button{
+  background-color: #009b72;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.checkout-button:hover,
+.checkout-button:focus {
+  background-color: #86dac4;
+}
+
+@media (max-width:768px){
+  .logo{
+    display: none;
+  }
+  #top{
+    width: fit-content;
+  }
+  #main{
+    width: fit-content;
+    padding: 0;
+    padding-left: 30px;
+  }
+  #t-selling img{
+    width: 150px;
+    height: 150px;
+  }
+  
+  .nav li{
+    padding: 0 50px;
+  }
+  .right img{
+    width: 250px;
+  }
+  #menu{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    grid-template-areas:
+      "s s"
+      "p c"
+     ; }
+    #menu p{
+      width: fit-content;
+      grid-area: p;
+    }
+    #menu form{
+      grid-area: s;
+    }
+    #cart-button{
+      grid-area: c;
+    }
+    
+    #categories{
+      text-align: center;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+      margin: auto;
+      padding: 0;
+    }
+ 
+}
+@media (max-width:430px){
+  .splide__arrow--next{
+    left: 200px;
+  }
+   .splide__arrow--prev{
+    left: 0;
+  }
+  #categories{
+    margin: 20px 60px;
+  }
+  #t-selling{
+        margin: 20px 100px;
+
+  }
+  #footer{
+    width: 550px;
+  }
+  .h2{
+  margin: 20px 194px;
+  }
+}

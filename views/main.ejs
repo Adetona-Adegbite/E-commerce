@@ -1,0 +1,114 @@
+<%- include("partials/nav") %>
+<%- include("partials/header") %>
+
+<section class="cart invisible">
+  <h2 style="text-align: center; padding: 20px;">Checkout</h2>
+  <hr>
+  <ul>
+    <% cart.forEach(item => { %>
+      <li class="cart-card">
+        <div class="cart-img">
+          <img src="<%= item.imageUrl %>" alt="">
+        </div>
+        <div class="cart-details">
+          <h3 style="text-align: left;"><%= item.name %></h3>
+          <div class="item-details">
+            <p>$<%= item.price %></p>
+            <p style="margin-left: 50px;">Quantity: </p>
+          </div>
+        </div>
+      </li>
+    <% }); %>
+    <p style="text-align: center; margin-top: 20px; font-size: 1.5rem;">Total: $<%= total %> </p>
+    <div class="checkout">
+      <button class="checkout-button">CHECKOUT</button>
+    </div>
+  </ul>
+</section>
+
+<section class="non-cart" id="categories">
+      <a href="#">
+        <div class="container">
+          <img src="/images/supermarket.png" alt="" />
+          <p>Supermarket</p>
+        </div>
+      </a>
+      <a href="#">
+        <div class="container">
+          <img src="/images/hb.png" alt="" />
+          <p>Health & Beauty</p>
+        </div></a
+      >
+      <a href="#">
+        <div class="container">
+          <img src="/images/ho.png" alt="" />
+          <p>Home</p>
+        </div></a
+      >
+      <a href="#">
+        <div class="container">
+          <img src="/images/ap.png" alt="" />
+          <p>Appliances</p>
+        </div></a
+      >
+      <a href="#">
+        <div class="container">
+          <img src="/images/pt.png" alt="" />
+          <p>Phones & Tablets</p>
+        </div></a
+      >
+      <a href="#">
+        <div class="container">
+          <img src="/images/com.png" alt="" />
+          <p>Computing</p>
+        </div></a
+      >
+      <a href="#">
+        <div class="container">
+          <img src="/images/fa.png" alt="" />
+          <p>Fashion</p>
+        </div></a
+      >
+      <a href="#">
+        <div class="container">
+          <img src="/images/bp.png" alt="" />
+          <p>Baby Products</p>
+        </div></a
+      >
+      <a href="#">
+        <div class="container">
+          <img src="/images/ga.png" alt="" />
+          <p>Gaming</p>
+        </div></a
+      >
+    </section>
+    <section class="non-cart" id="t-selling">
+      <h2 style="padding: 20px 0">Top Selling</h2>
+      <div class="splide">
+        <div class="splide__track">
+          <div class="div splide__list">
+            <% products.forEach(product => {%>
+              <div class="splide__slide">
+              <a href="/<%= product.name %>">
+                <div class="img_box">
+                  <img src="<%= product.imageUrl %>" alt="" />
+                </div>
+              </a>
+              <h3><%= product.name %></h3>
+              <p>$<%= product.price %></p>
+
+              <div class="add">
+                  <button onclick="refresh()" data-product-image="<%= product.imageUrl %>" data-product-price="<%= product.price %>" data-product-name="<%= product.name %>" id="<%= product.name %>" class="add-to-cart">
+                    <ion-icon name="cart-outline"></ion-icon>
+                  </button>
+              </div>
+              </div>
+            <%}); %>
+          
+        </div>
+      </div>
+    </section>
+    
+   
+
+    <%- include("partials/footer") %>   

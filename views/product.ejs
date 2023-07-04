@@ -1,0 +1,46 @@
+<%-include("partials/nav")%>
+<div class="product">
+    <div id="product-left">
+        <img src="<%= product.imageUrl %>" alt="">
+    </div>
+    <div id="product-right">
+        <h3><%= product.name %></h3>
+        <p id="description" style="font-size: 1.3rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga praesentium consequatur ex quaerat quia dolore. Ipsum nemo, dolores cumque nobis et dolor neque libero voluptas officia esse? Voluptate maiores doloremque, quibusdam eligendi reprehenderit necessitatibus quod fugiat temporibus pariatur asperiores suscipit, a qui dolorum sunt soluta dignissimos nobis ex id! Dicta.</p>
+        <div id="product-details" >
+            <p ><%= product.price %></p>
+            <select id="quantity" name="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+        <!-- Add more options as needed -->
+            </select>
+            <br>
+            <button>Add to Cart</button>
+         </div>
+    </div>
+</div>
+<section id="t-selling">
+      <h2 style="padding: 20px 0">Top Selling</h2>
+      <div class="splide">
+        <div class="splide__track">
+          <div class="div splide__list">
+            <% products.forEach(product => {%>
+              <div class="splide__slide">
+              <a href="/<%= product.name %>">
+                <div class="img_box">
+                  <img src="<%= product.imageUrl %>" alt="" />
+                </div>
+              </a>
+              <h3><%= product.name %></h3>
+                              <p><%= product.price %></p>
+
+              <div class="add">
+                <button><ion-icon name="cart-outline"></ion-icon></button>
+              </div>
+              </div>
+            <%}); %>
+          
+        </div>
+      </div>
+    </section>
+<%-include("partials/footer")%>
